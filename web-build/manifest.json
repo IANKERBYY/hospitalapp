@@ -1,0 +1,9 @@
+{
+  "background_color": "#2E3A8C",
+  "display": "standalone",
+  "lang": "en",
+  "name": "Hospital Equipment Management",
+  "short_name": "Hospital Equipment Management",
+  "start_url": "/?utm_source=web_app_manifest",
+  "orientation": "portrait"
+}
