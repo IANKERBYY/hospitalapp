@@ -4,7 +4,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "expo start",
+    "start": "node server.js",
+  "heroku-postbuild": "npm install && cd client && npm install && npm run build",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web"

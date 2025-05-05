@@ -1,16 +1,15 @@
-// server.js
-const path = require('path');
 const express = require('express');
-
+const path = require('path');
 const app = express();
+const PORT = process.env.PORT || 3000;
 
-app.use(express.static(path.join(__dirname, 'web-build')));  // Serve static files
+// Serve static files from React Native web build
+app.use(express.static(path.join(__dirname, 'web-build')));
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'web-build', 'index.html'));  // Serve index.html
+  res.sendFile(path.join(__dirname, 'web-build', 'index.html'));
 });
 
-const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
